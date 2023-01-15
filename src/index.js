@@ -34,7 +34,6 @@ function printElements(data) {
 
 function printError(error) {
   const errorType = Object.values(error[1]);
-  console.log(errorType[3]);
   document.querySelector('#showResults').innerText = `There was an error: ${errorType[3]}`;
 }
 
