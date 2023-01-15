@@ -29,7 +29,13 @@ function printElements(data) {
   const currency = currencyArray[currencyCode];
   const rate = exchangeArray[currencyCode];
   const newAmount = rate * amount;
-  document.querySelector('#showResults').innerText = `$${amount} in ${currency} is ${newAmount}`;
+  if (isNaN(currencyCode)) {
+    document.querySelector('#showResults').innerText = "We don't yet have data for your selected currency";
+  } else if (amount < .99 || amount > 10,000) {
+    document.querySelector('#showResults').innerText = "Please enter a valid amount";
+  } else {
+    document.querySelector('#showResults').innerText = `$${amount} in ${currency} is ${rate * amount}`;
+  }
 }
 
 function printError(error) {
