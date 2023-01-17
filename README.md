@@ -12,8 +12,8 @@
 * _Javascript_
 * _Webpack_
 * _ESLint_
-* _Postman_
-* _ExchangeRate-API_
+* _[Postman](https://www.postman.com/)_
+* _[ExchangeRate-API](https://www.exchangerate-api.com/)_
 
 ## Description
 
@@ -29,8 +29,7 @@ _This is a simple application for converting currencies. The user selects a curr
 
 ## Known Bugs
 
-* _I have a major issue in my ExchangeService-API accounts that I have tried to resolve_
-_My API request always returns an error-type of either invalid-key or inactive-account. I have created multiple accounts and used the supplied confirmation link to confirm and activate my accounts, but none of my API keys work to produce a valid request, even after testing in Postman. I also tried emailing the support team for the service and creating a Pro account_
+* _No known bugs_
 
 ## License
 
