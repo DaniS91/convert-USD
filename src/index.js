@@ -25,12 +25,12 @@ function printElements(data) {
   const currency = document.querySelector('#currency').value;
   const amount = document.querySelector('#amount').value;
   const rate = data[0]["conversion_rates"][currency];
-  if (isNaN(currencyCode)) {
-    document.querySelector('#showResults').innerText = "We don't yet have data for your selected currency";
-  } else if (amount < 0 || amount > 10000) {
+  if (data[0]["conversion_rates"][currency] === "undefined") {
+    document.querySelector('#showResults').innerText = "No data exists for your selected currency";
+  } else if (amount < 0.99 || amount > 10000) {
     document.querySelector('#showResults').innerText = "Please enter a valid amount";
   } else {
-    document.querySelector('#showResults').innerText = `$${amount} in ${currency} is ${rate * amount}`;
+    document.querySelector('#showResults').innerText = `$${amount} USD = ${rate * amount} ${currency}`;
   }
 }
 
