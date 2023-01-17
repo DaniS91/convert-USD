@@ -22,12 +22,9 @@ function handleFormSubmission(event) {
 }
 
 function printElements(data) {
-  const currencyCode = document.querySelector('#currency').value;
+  const currency = document.querySelector('#currency').value;
   const amount = document.querySelector('#amount').value;
-  const exchangeArray = Object.values(data);
-  const currencyArray = Object.keys(data);
-  const currency = currencyArray[currencyCode];
-  const rate = exchangeArray[currencyCode];
+  const rate = data[0]["conversion_rates"][currency];
   if (isNaN(currencyCode)) {
     document.querySelector('#showResults').innerText = "We don't yet have data for your selected currency";
   } else if (amount < 0 || amount > 10000) {
